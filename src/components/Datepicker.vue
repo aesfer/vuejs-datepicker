@@ -337,13 +337,14 @@ export default {
     },
     /**
      * Clear the selected date
+     * @param {Boolean} byButton
      */
-    clearDate () {
+    clearDate (byButton) {
       this.selectedDate = null
       this.setPageDate()
       this.$emit('selected', null)
       this.$emit('input', null)
-      this.$emit('cleared')
+      this.$emit('cleared', byButton)
     },
     /**
      * @param {Object} date
